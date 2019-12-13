@@ -1,0 +1,39 @@
+%header
+  .wrapper-header
+    .wrapper-header__link
+      %ul
+        %li
+          = link_to root_path do
+            トップ
+        %li
+          = link_to company_about_path do
+            当事業所について
+        %li
+          = link_to company_flow_path do
+            ご利用の流れ
+        %li
+          = link_to company_access_path do
+            アクセス
+        %li
+          = link_to "" do
+            お問い合わせ
+    .wrapper-header__tel
+      %p お問い合わせはこちらへ
+      %p 0980-43-6717
+    -# #pulldown
+    -#   %ul.menu
+    -#     %li
+    -#       = fa_icon "bars",class: "menu_icon"  
+    -#       = link_to root_path do
+    -#         %h2 がゆまーる
+    -#       %ul.sub
+    -#         %li#to_introducion
+    -#           = link_to "" do
+    -#             がゆまーるについて
+    -#         %li#to_flow
+    -#           = link_to "" do
+    -#             ご利用の流れ
+    -#         %li#to_access
+    -#           = link_to "" do
+    -#             アクセス
+
