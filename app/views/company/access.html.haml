@@ -1,7 +1,7 @@
 .wrapper
   .wrapper__section#access
     .wrapper__section__content
-      %script{:async => "", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyCzL-LOAB9Y8UjH9SOnrbPyOAiXVFomDH4&callback=initMap"}
+      %script{:async => "", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAP_API_KEY"]}&callback=initMap"}
       :javascript
         var map;
           var marker;
