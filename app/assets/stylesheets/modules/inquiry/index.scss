@@ -1,0 +1,55 @@
+.newWrap {
+  padding: 150px 300px 50px;
+  .newTitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .newContent{
+    margin: 0 auto;
+    .alert {
+      margin-bottom: 30px;
+      color: red;
+      font-weight: 500;
+      strong {
+        color: black;
+        font-weight: 600;
+      }
+    }
+    .row {
+      .title {
+        height: 30px;
+        font-size: 14px;
+        .text-danger {
+          color: red;
+        }
+      }
+      .box, .field_with_errors {
+        height: 40px;
+        margin-bottom: 10px;
+      }
+      .textarea {
+        height: 200px;
+      }
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      background: #155B75;/*ボタン色*/
+      color: #FFF;
+      border-bottom: solid 4px #627295;
+      border-radius: 3px;
+    }
+    .btn:active {
+      /*ボタンを押したとき*/
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;/*線を消す*/
+    }
+  }
+}
+.form {
+  width: 100%;
+  height: 100%;
+  padding:  5px 10px;
+}
