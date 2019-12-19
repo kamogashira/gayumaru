@@ -1,0 +1,56 @@
+.wrapper
+  .wrapper__section#access
+    .wrapper__section__content
+      %script{:async => "", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAP_API_KEY"]}&callback=initMap"}
+      :javascript
+        var map;
+          var marker;
+          var geocoder;
+          function initMap() {
+            geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+            'address': '名護市宇茂佐の森4-3-2' //住所
+            }, function(results, status) { 
+              if (status === google.maps.GeocoderStatus.OK) {
+              map = new google.maps.Map(document.getElementById('gmap'), {
+                center: results[0].geometry.location,
+                zoom: 17 //ズーム
+            });
+            marker = new google.maps.Marker({
+            position: results[0].geometry.location,
+            map: map
+            });
+            infoWindow = new google.maps.InfoWindow({
+            content: '<h4>ツールチップのタイトル</h4>'
+            });
+            marker.addListener('click', function() {
+              infoWindow.open(map, marker); 
+            });
+            } else { 
+              alert(status);
+            }
+          });
+        }
+      #gmap
+      .wrapper__section__content--map-text
+
+        %h3 〒905-0009
+        %h3 名護市宇茂佐の森4-3-2
+        %h3 トーマス宇茂佐の森305号 
+        %h3 電話:0980-43-6717　Fax:0980-43-6718
+        %h3 受付時間 月~土、午前 9 時~午後6時まで 
+        %h3 (日・祝日・年末年始はお休みです)
+
+      .wrapper__section__content--text-upper
+        %h3 介護の悩みや困り事がありましたらいつでもご相談ください
+        %h2 相談無料
+        %br 
+        %h3 通常の提供地域 名護市・本部町・今帰仁村
+        %h3 ※その他地域の方もご相談ください
+        %br
+      .wrapper__section__content--text-bottom
+        %h3 お気軽にお電話ください
+        %h2 0980-43-6717
+      .wrapper__section__content--image
+        = image_tag "goricho.jpg", class: "background-half--bottom"
+        = image_tag "sisa2.jpg", class: "background-half--bottom"

@@ -1,0 +1,31 @@
+.newWrap
+  .newTitle
+    %h1 お問い合わせ:確認
+  .newContent
+    = form_for(@inquiry,  url: {controller: 'inquiry', action: 'thanks'} ) do |f|
+      .row
+        .title
+          お名前
+        .box
+          = f.hidden_field :name
+          = @inquiry.name
+        .title
+          ふりがな
+        .box
+          = f.hidden_field :name_kana
+          = @inquiry.name_kana
+        .title
+          お電話番号
+        .box
+          = f.hidden_field :tel
+          = @inquiry.tel
+        .title
+          メールアドレス
+        .box
+          = f.hidden_field :email
+          = @inquiry.email
+        .title お問い合わせ内容
+        .box.textarea
+          = f.hidden_field :message
+          = @inquiry.message
+      = f.submit '送信する', class: 'btn'

@@ -1,0 +1,38 @@
+- @page_title = 'お問い合わせ'
+.newWrap
+  .newTitle
+    %h1 お問い合わせ
+  .newContent
+    = form_for(@inquiry,  url: {controller: 'inquiry', action: 'confirm'} ) do |f|
+      - if @inquiry.errors.any?
+        .alert{:role => "alert"}
+          %strong 入力内容にエラーがあります
+          %ul
+            - @inquiry.errors.each do |attr, msg|
+              %li= msg
+      .row
+        .title
+          お名前
+          %span.text-danger （必須）
+        .box
+          = f.text_field :name, class: 'form', placeholder: '山田 太郎'
+        .title
+          フリガナ
+          %span.text-danger （必須）
+        .box
+          = f.text_field :name_kana, class: 'form', placeholder: 'ヤマダ タロウ'
+        .title
+          お電話番号(ハイフンなし)
+        .box
+          = f.text_field :tel, class: 'form'
+        .title
+          メールアドレス
+          %span.text-danger （必須）
+        .box
+          = f.text_field :email, class: 'form'
+        .title お問い合わせ内容
+        .box.textarea
+          = f.text_area :message, class: 'form', rows: '6'
+      = f.submit '確認', class: 'btn'
+
+

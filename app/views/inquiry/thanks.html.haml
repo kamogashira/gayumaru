@@ -1,0 +1,29 @@
+.newWrap
+  .newTitle
+    %h1 お問い合わせ:送信完了
+  .newContent
+    %p ※このメールはシステムからの自動返信です
+    %br
+    ="#{@inquiry.name}　様"
+    %p お問い合わせありがとうございます
+    %p 以下の内容でお問い合わせを受け付けいたしました
+    %p 改めて、担当よりご連絡をさせていただきます
+    %br
+    ━━━━━━□■□　お問い合わせ内容　□■□━━━━━━
+    %br
+    お名前：
+    =@inquiry.name
+    %br
+    E-Mail：
+    =@inquiry.name_kana
+    %br
+    電話番号：
+    =@inquiry.tel
+    %br
+    お問い合せ日時：
+    =Time.zone.now.to_s(:published_on)
+    %br
+    お問い合わせ内容：
+    =@inquiry.message
+    %br
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━
