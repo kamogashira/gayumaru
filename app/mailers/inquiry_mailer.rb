@@ -6,7 +6,7 @@ class InquiryMailer < ApplicationMailer
     @inquiry = inquiry
     mail(
       to: 't.ito@gayumar.com', 
-      subject: 'お問い合わせ通知's
+      subject: 'お問い合わせ通知'
     )
   end
 end
