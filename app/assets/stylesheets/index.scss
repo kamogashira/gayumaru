@@ -15,13 +15,12 @@
     z-index: 1;
     &__image {
       position: absolute;
-      top: 250px;
-      left: 60px;
+      top: 350px;
+      left: 90px;
       z-index: 100;
       img {
         width: 350px;
         height: 200px;
-
       }
     }
     &__top {

@@ -12,7 +12,8 @@ header {
   .wrapper-header {
     width: 100%;
     height: 100%;
-    background-color: #155B75;
+    // background-color: #155B75;
+    background-color: #339966;
     display: flex;
     &__link {
       width: 80%;
@@ -30,10 +31,6 @@ header {
             text-decoration: none;
             cursor: pointer;
             color: white;
-            // text-shadow: 1px 1px 1px #111111,
-            //             1px -1px 1px #111111,
-            //             -1px 1px 1px #111111,
-            //             -1px -1px 1px #111111,;
             padding: 0 20px;
           }
           &:hover > a {
@@ -54,8 +51,12 @@ header {
         color: white;
         text-align: center;
       }
-      p:nth-child(2){
-        font-size: 24px;
+      &__bottom {
+          text-align: center;
+        a {
+          font-size: 24px;
+          color: white;
+        }
       }
     }
     #pulldown {

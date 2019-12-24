@@ -5,8 +5,8 @@ class InquiryMailer < ApplicationMailer
   def received_email(inquiry)
     @inquiry = inquiry
     mail(
-      to: 'asuka.kamo@icloud.com', 
-      subject: 'お問い合わせ通知'
+      to: 't.ito@gayumar.com', 
+      subject: 'お問い合わせ通知's
     )
   end
 end
