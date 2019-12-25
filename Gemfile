@@ -61,3 +61,4 @@ gem 'haml-rails'
 gem "font-awesome-rails"
 gem 'dotenv-rails'
 gem 'activemodel'
+gem "sitemap_generator"
