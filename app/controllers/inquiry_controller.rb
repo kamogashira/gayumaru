@@ -15,7 +15,6 @@ class InquiryController < ApplicationController
   def thanks
     # メール送信
     @inquiry = Inquiry.new(inquiry_params)
-    # test = InquiryMailer.new
     InquiryMailer.received_email(@inquiry).deliver
   end
 

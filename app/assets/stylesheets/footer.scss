@@ -12,14 +12,9 @@ footer {
     &__content {
       width: 500px;
       margin: 0 auto;
-      display: flex;
-      &__left {
-        width: 100px;
-        text-align: right;
-      }
-      &__right {
+      &__text {
         width: 400px;
-        margin: auto auto;
+        margin: 10px auto;
         ul {
           text-align: center;
           li {

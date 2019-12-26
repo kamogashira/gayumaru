@@ -9,6 +9,6 @@ class Inquiry
   validates :name, presence: {message: '名前を入力してください'}
   validates :name_kana, presence: {message: 'ふりがなを入力してください'}
   validates :email, presence: {message: 'メールアドレスを入力してください'}, 
-                    format: { with: VALID_EMAIL_REGEX, message: '無効なメールアドレスです', allow_blank: true }
-  validates :tel, format: { with: VALID_PHONE_REGEX, message: '電話番号はハイフンなし10桁or11桁で入力してください' }
+                    format: { with: VALID_EMAIL_REGEX, message: '無効なメールアドレスです' }
+  validates :tel, format: { with: VALID_PHONE_REGEX, message: '電話番号はハイフンなし10桁or11桁で入力してください', allow_blank: true  }
 end
