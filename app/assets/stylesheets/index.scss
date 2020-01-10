@@ -72,19 +72,20 @@
         justify-content: center;
         &--left {
           padding: 50px 20px 20px;
-          width: 40%;
+          width: 30%;
           z-index: 100;
           h3 {
-            // width: 60%;
             color: #222222;
             font-size: 25px;
             font-weight: 800;
             background: linear-gradient(transparent 70%,#EEEEEE 70%); 
             margin: 0 auto 10px;
+            text-align: center;
           }
-          p {
+          h4 {
             font-size: 18px;
             color: #222222;
+            text-align: center;
           }
           &__image {
             margin-top: 50px;
@@ -115,7 +116,7 @@
           }
           &--image {
             width: 50%;
-            margin-top: 50px;
+            // margin-top: 50px;
           }
         }
       }
