@@ -1,19 +1,18 @@
 footer {
   width: 100%;
   height: 80px;
-  background-color: #339966;
-  position: relative;
+  background-color: hsl(150, 50%, 40%);
+  position: absolute;
   .wrapper-footer {
     width: 100%;
     height: 80px;
     margin: 0 auto;
     position: absolute;
-    bottom: 0;
     &__content {
-      width: 500px;
+      width: 70%;
       margin: 0 auto;
       &__text {
-        width: 400px;
+        width: 60%;
         margin: 10px auto;
         ul {
           text-align: center;
