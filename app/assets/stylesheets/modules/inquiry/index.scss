@@ -53,3 +53,47 @@
   height: 100%;
   padding:  5px 10px;
 }
+
+@media screen and (max-width: 767px){
+  .newWrap {
+    padding: 10px;
+    .newTitle {
+      font-weight: 800;
+      text-shadow: 2px 2px 4px #999999;
+      font-size: 25px;
+    }
+    .newContent{
+      position: relative;
+      .row {
+        .title {
+          font-size: 16px;
+        }
+      }
+      .page-top {
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        font-size: 80%;
+        z-index: 300;
+      }
+    
+      /*ボタンの色やサイズを設定する*/
+      .page-top a {
+        display: block;
+        background: #666;
+        color: #fff;
+        width: 150px;
+        padding: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+      }
+    
+      /*マウスオーバーした際に色を変化させる*/
+      .page-top a:hover {
+        background: #999;
+        text-decoration: none;
+      }
+    }
+  }
+}

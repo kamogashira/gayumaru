@@ -1,9 +1,11 @@
 .wrapper
+  %p#page-top
+    = link_to "PAGE TOP", ""
   .wrapper__section#top
     = image_tag "gazyumaru1.jpg",class: "background"
     = image_tag "couple.jpg", class: "background"
     = image_tag "couple2.jpg",class: "background"
-  .wrapper__section
+  .wrapper__section#main
     .wrapper__section__top
       %h4 沖縄県指定事業者番号: 4770900902
     .wrapper__section__title
@@ -16,7 +18,7 @@
       %br
       %h3 がじゅまるの木のように名護市に根付き、ゆいまーる精神で地域一丸となって高齢者を支えていけるような事業所でありたいとの思いが込めれられています。
 
-  .wrapper__section#introduction
+  .wrapper__section
     .wrapper__section__content
       .wrapper__section__content--box
         .wrapper__section__content--box--left
@@ -31,5 +33,83 @@
         .wrapper__section__content--box--right--image
           = image_tag "gazyumaru2.jpg", class: "background-half"
           = image_tag "bridge.jpg", class: "background-half"
+
+  .wrapper__section#introduction#hide
+    .wrapper__section__content
+      .wrapper__section__content--box
+
+        .wrapper__section__content--box--right
+          %h3 居宅介護支援事業所とは
+          %p ケアマネジャー(介護支援専門員)が介護や介護保険に関する様々な ご相談を承ります。要介護者ご本人やご家族のご要望をもとに、介護保険で受けられるサービスの調整や費用の計算などを当事者に代わって行います。
+
+          %h3 当事業所の特長
+          %p 当事業所では「特定事業所加算」を算定しています。特定事業所とは、居宅支援事業所において、専門性の高い人材を確保し、介護度の高い利用者や支援が困難な場合に対しても積極的に提供するといった、質の高い介護サービスを実施している事業所を評価する加算です。 (主任介護支援専門員常勤)
+
+  .wrapper__section#flow#hide
+    = image_tag "flow-image-s1.png", class: "background-flow"
+    = image_tag "flow-image-s2.png", class: "background-flow"
+
+  .wrapper__section#access#hide
+    .wrapper__section__content
+      %script{:async => "", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAP_API_KEY"]}&callback=initMap"}
+      :javascript
+        var map;
+          var marker;
+          var geocoder;
+          function initMap() {
+            geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+            'address': '名護市宇茂佐の森4-3-2' //住所
+            }, function(results, status) { 
+              if (status === google.maps.GeocoderStatus.OK) {
+              map = new google.maps.Map(document.getElementById('gmap'), {
+                center: results[0].geometry.location,
+                zoom: 17 //ズーム
+            });
+            marker = new google.maps.Marker({
+            position: results[0].geometry.location,
+            map: map
+            });
+            infoWindow = new google.maps.InfoWindow({
+            content: '<h4>ツールチップのタイトル</h4>'
+            });
+            marker.addListener('click', function() {
+              infoWindow.open(map, marker); 
+            });
+            } else { 
+              alert(status);
+            }
+          });
+        }
+      .wrapper__section__content--map-text
+
+        %h3 〒905-0009
+        %h3 名護市宇茂佐の森4-3-2
+        %h3 トーマス宇茂佐の森305号 
+        %h3 電話:0980-43-6717　Fax:0980-43-6718
+        %h3 受付時間 月~土、午前 9 時~午後6時まで 
+        %h3 (日・祝日・年末年始はお休みです)
+
+      .wrapper__section__content--text-upper
+        %h3 介護の悩みや困り事がありましたらいつでもご相談ください
+        %h2 相談無料
+        %br 
+        %h3 通常の提供地域 名護市・本部町・今帰仁村
+        %h3 ※その他地域の方もご相談ください
+        %br
+      .wrapper__section__content--text-bottom
+        %h3 お気軽にお電話ください
+        .tel
+          = link_to "0980-43-6717", "tel:0980-43-6717"
+        %br
+        %br
+        %h2 メールでのご相談も承ります
+        .tel
+          = link_to inquiry_index_path do
+            =fa_icon("envelope",text: "お問い合わせはこちら")
+      .wrapper__section__content--image
+        = image_tag "goricho.jpg", class: "background-half--bottom"
+        = image_tag "sisa2.jpg", class: "background-half--bottom"
+      #gmap
 
 

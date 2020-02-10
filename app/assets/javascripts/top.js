@@ -20,34 +20,5 @@ $(document).on('turbolinks:load', function(){
   speed: 5000,
   fade: true,
   });
-  //プルダウンメニューから「がゆまーるについて」ページへのスクロール
-  $(function () {
-    $('#to_introducion').click(function() {
-      $('html,body').animate({
-        scrollTop : $('#introduction').offset().top
-      }, 'slow');
-      return false;
-    });
-  });
-  //プルダウンメニューから「ご利用の流れ」ページへのスクロール
-  $(function () {
-    $('#to_flow').click(function() {
-      $('html,body').animate({
-        scrollTop : $('#flow').offset().top
-      }, 'slow');
-      return false;
-    });
-  });
-  //プルダウンメニューから「アクセス」ページへのスクロール
-  $(function () {
-    $('#to_access').click(function() {
-      $('html,body').animate({
-        scrollTop : $('#access').offset().top
-      }, 'slow');
-      return false;
-    });
-  });
-
-
 });
 
