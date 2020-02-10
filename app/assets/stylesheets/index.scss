@@ -10,7 +10,6 @@ html,body {
 .wrapper {
   overflow: auto;
   height: 100vh;
-  padding: 0 20px;
   margin-bottom: 20px;
   &__section {
     width: 100%;
@@ -229,11 +228,12 @@ html,body {
 
 @media screen and (max-width: 767px){
   .wrapper {
+    padding: 0 70px;
     &__section#top {
       display: none;
     }
     &__section {
-      min-height: 500px;
+      min-height: 200px;
       h4 {
         display: none;
       }
@@ -254,7 +254,7 @@ html,body {
         }
       }
       &__text {
-        width: 450px;
+        width: 100%;
         h3 {
           font-size: 16px;
         }
@@ -266,11 +266,13 @@ html,body {
           &--left, &--right {
             padding: 20px;
             margin: 0 auto;
-            width: 500px;
+            width: 100%;
           }
           h3 {
             width: 220px;
-            margin-right: 0;
+            // margin-right: 0;
+            font-size: 20px;
+            background-color: #fff;
           }
           p {
             font-size: 16px;
@@ -288,6 +290,9 @@ html,body {
               img {
                 display: none;
               }
+            }
+            h3:first-child {
+              margin-top: 600px;
             }
           }
         }
