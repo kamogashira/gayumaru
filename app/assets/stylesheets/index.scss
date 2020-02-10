@@ -301,16 +301,21 @@ html,body {
           margin: 0 auto;
           position: relative;
         }
+        &--text-upper {
+          h3 {
+            font-size: 16px;
+          }
+        }
         &--text-bottom {
           top: 150px;
           h2 {
-            font-size: 30px;
+            font-size: 20px;
             color: #444444;
             font-weight: 800;
             text-shadow: 2px 2px 4px #999999;
           }
           .tel {
-            font-size: 22px;
+            font-size: 20px;
             margin-bottom: 20px;
             background-color: blue;
             a {
