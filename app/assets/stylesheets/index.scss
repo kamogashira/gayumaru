@@ -228,7 +228,7 @@ html,body {
 
 @media screen and (max-width: 767px){
   .wrapper {
-    padding: 0 50px;
+    padding: 0 40px;
     &__section#top {
       display: none;
     }
@@ -308,6 +308,7 @@ html,body {
         }
         &--text-bottom {
           top: 150px;
+          height: 250px;
           h2 {
             font-size: 20px;
             color: #444444;
@@ -328,7 +329,7 @@ html,body {
           }
         }
         &--image {
-          top: 350px;
+          top: 150px;
           left: 0;
           width: 70%;
         }
