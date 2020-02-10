@@ -10,8 +10,10 @@ html,body {
 .wrapper {
   overflow: auto;
   height: 100vh;
+  padding: 0 20px;
+  margin-bottom: 20px;
   &__section {
-    width: 100vw;
+    width: 100%;
     min-height: 700px;
     position: relative;
     z-index: 1;
