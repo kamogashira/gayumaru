@@ -202,7 +202,7 @@ html,body {
   height: auto;
   margin-top: 60px;
   &--bottom {
-    width: 90%;
+    width: 80%;
     height: auto;
   }
 }
@@ -254,7 +254,7 @@ html,body {
       &__text {
         width: 450px;
         h3 {
-          font-size: 20px;
+          font-size: 16px;
         }
       }
       &__content {
@@ -271,13 +271,13 @@ html,body {
             margin-right: 0;
           }
           p {
-            font-size: 20px;
+            font-size: 16px;
           }
           &--right--image {
             display: none;
           }
           &--left {
-            width: 80%;
+            width: 100%;
             background-image: url("sisa.jpg");
             background-size: contain;
             background-repeat: no-repeat;
@@ -324,6 +324,11 @@ html,body {
           top: 950px;
           left: 0;
           text-align: center;
+          h3 {
+            font-size: 16px;
+
+          }
+
         }
       }
 
