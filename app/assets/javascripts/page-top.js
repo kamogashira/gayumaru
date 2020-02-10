@@ -1,9 +1,9 @@
 $(document).on('turbolinks:load', function(){
   var topBtn = $('#page-top');
   topBtn.hide();
-  //スクロールが100に達したらボタンを表示
+  //スクロールが500に達したらボタンを表示
   $(".wrapper").scroll(function () {
-    if ($(".wrapper").scrollTop() > 100) {
+    if ($(".wrapper").scrollTop() > 500) {
       topBtn.fadeIn();
       } else {
       topBtn.fadeOut();

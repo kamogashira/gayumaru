@@ -333,7 +333,8 @@ html,body {
           }
         }
         &--image {
-          top: 150px;
+          top: 50px;
+          bottom: 100px;
           left: 0;
           width: 70%;
         }
@@ -341,6 +342,7 @@ html,body {
           top: 950px;
           left: 0;
           text-align: center;
+          height: 200px;
           h3 {
             font-size: 16px;
 
@@ -363,7 +365,7 @@ html,body {
     width: 90%;
     height: 400px;
     position: absolute;
-    top: 1150px;
+    top: 1250px;
     z-index: 100;
     margin-bottom: 100px;
   }
