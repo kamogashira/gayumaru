@@ -302,12 +302,16 @@ html,body {
           position: relative;
         }
         &--text-upper {
+          height: 210px;
           h3 {
             font-size: 16px;
           }
+          h3:nth-child(5) {
+            font-weight: bold;
+          }
         }
         &--text-bottom {
-          top: 150px;
+          top: 70px;
           height: 250px;
           h2 {
             font-size: 20px;
